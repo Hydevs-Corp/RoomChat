@@ -52,6 +52,7 @@ const JoinRoomByName = () => {
             {result}
             
             <h2>Rejoindre une Room avec son nom</h2>
+            <h4>(privées ou publiques)</h4>
             <input type="text" onChange={(e) => setState(e.target.value)} />
             <input type="submit" value="Rejoindre" />
         </form>

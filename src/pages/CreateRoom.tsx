@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import GlobalContext, { initialType } from "../scripts/globalContext";
 import { socket } from "../scripts/socketio";
+import "./CreateRoom.scss";
 
 interface form {
     roomname: string;
@@ -21,7 +22,7 @@ const CreateRoom = () => {
 
     const [formData, setFormData]: [form, any] = useState({
         roomname: "",
-        isPublic: false,
+        isPublic: true,
     });
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -91,7 +92,7 @@ const CreateRoom = () => {
 
     const [errors, setErrors]: [Array<string>, any] = useState([]);
     return (
-        <div className="page user">
+        <div className="page createroom">
             <form onSubmit={handleSubmit}>
                 <div className="error">
                     {errors.map((err, key) => (
@@ -102,13 +103,13 @@ const CreateRoom = () => {
                     className="requiredValidation"
                     min={4}
                     max={12}
-                    placeholder="roomname"
+                    placeholder="Nom de la Room"
                     type="text"
                     id="roomname"
                     onInput={handleChange}
                 />
                 <label htmlFor="isPublic">Est-ce public ?</label>
-                <input type="checkbox" id="isPublic" onChange={handleCheckChange} />
+                <input defaultChecked={true} type="checkbox" id="isPublic" onChange={handleCheckChange} />
                 <input type="submit" />
             </form>
         </div>
