@@ -1,7 +1,6 @@
 import PocketBase, { Record, RecordAuthResponse } from "pocketbase";
 
 // unsafe mod
-// const pb = new PocketBase('http://louisrvl.fr:8091');
 export const pb = new PocketBase("https://louisrvl.fr/pocketbase/");
 
 interface PromiseReturn {

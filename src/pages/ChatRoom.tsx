@@ -27,8 +27,6 @@ const ChatRoom = () => {
 
     const session = useMessageList(roomId, { uid: userId || socket.id, name: username, sid: socket.id }, dummy);
 
-    console.log("sss", session?.messages)
-
     let prevAuthor = 'default';
     return (
         <div className="page chatroompage">

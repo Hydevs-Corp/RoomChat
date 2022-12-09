@@ -1,3 +1,3 @@
 import { io } from "socket.io-client";
 
-export const socket = io("http://192.168.1.59:3030");
+export const socket = io(import.meta.env.VITE_BACKEND_URL);

@@ -9,7 +9,7 @@ import Room from "./Room";
 import "./RoomList.scss";
 
 const RoomList = () => {
-    const { data, error } = useFetch("http://localhost:3030/getRoomList") as {
+    const { data, error } = useFetch(`${import.meta.env.VITE_BACKEND_URL}/getRoomList`) as {
         data: sessionList | void;
         error: Error | void;
     };
