@@ -1,0 +1,35 @@
+:root {
+    --back-one: #181c22;
+    --back-two: #222831;
+    --back-three: #393e46;
+    --vibrant: #00adb5;
+    --white-one: white;
+    --white-two: rgba(var(--white-one), 0.5);
+    --shadow-one: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    .page {
+        flex: 1;
+        display: flex;
+    }
+}
+
+a {
+    color: white;
+    &:visited {
+        color: white;
+    }
+}
+
+.requiredValidation:valid {
+    border: 1px green solid;
+    &:focus {
+        outline: 2px green solid;
+    }
+}

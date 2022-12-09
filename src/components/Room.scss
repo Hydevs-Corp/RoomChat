@@ -1,0 +1,43 @@
+
+.page {
+    width: 700px;
+    max-width: 95vw;
+}
+.room {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #12277e;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.267);
+    border-radius: 7px;
+    padding: 16px;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    &:hover {
+        box-shadow: 0 0 10px black;
+
+    }
+    .name {
+        font-size: larger;
+        font-weight: 700;
+    }
+
+    .owner {
+        text-align: center;
+    }
+
+    button {
+        outline: none;
+        border: none;
+        background-color: black;
+        padding: 0;
+        border-radius: 10px;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.318);
+        &:focus, &:hover {
+            border: 1px solid rgb(40, 80, 255);
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.JoinRoomByName {
+    display: flex;
+    gap: 5px;
+    margin: 0 auto;
+    flex-direction: column;
+    input[type=submit] {
+        padding: 10px;
+    }
+}

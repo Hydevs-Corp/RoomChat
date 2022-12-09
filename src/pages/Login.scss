@@ -1,0 +1,44 @@
+.login {
+    form {
+        display: grid;
+
+        padding: 20px;
+        width: 100%;
+        gap: 10px;
+        grid-template:
+            "u" min-content
+            "e" min-content
+            "p" min-content
+            "s" 50px
+            ;
+
+        input {
+            height: 20px;
+        }
+
+        #username {
+            grid-area: u;
+        }
+
+        #email {
+            grid-area: e;
+        }
+
+        #confirmEmail {
+            grid-area: ce;
+        }
+
+        #password {
+            grid-area: p;
+        }
+
+        #confirmPassword {
+            grid-area: cp;
+        }
+
+        input[type=submit] {
+            grid-area: s;
+            height: 100%;
+        }
+    }
+}
