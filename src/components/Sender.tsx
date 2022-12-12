@@ -25,7 +25,7 @@ const Sender = () => {
             inputRef.current.value = "";
         }
         setInputMessage("");
-        inputMessage && socket.emit("sendMessage", { value: inputMessage, name: username, uid: userId || socket.id, sessionId:roomId });
+        inputMessage?.trim() && socket.emit("sendMessage", { value: inputMessage, name: username, uid: userId || socket.id, sessionId:roomId });
     };
 
     return (
